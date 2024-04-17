@@ -5,10 +5,10 @@ echo "**** WELCOME TO JAVAFX-DAP ****"
 echo "Current directory: $(pwd)"
 
 # Verify if the JAR file exists
-if [ -f "JavaDockerContainerAutoPull-1.0-SNAPSHOT.jar" ]; then
+if [ -f "JavaFX-DAP-1.0-SNAPSHOT.jar" ]; then
     # Run the JAR file
     echo "Executing the pre-built JavaFX-DAP JAR file..."
-    java -jar JavaDockerContainerAutoPull-1.0-SNAPSHOT.jar
+    java -jar JavaFX-DAP-1.0-SNAPSHOT.jar
     # Check the exit status of the previous command
     if [ $? -eq 0 ]; then
         echo "JavaFX-DAP JAR execution finished successfully - github repo is pulled down to target-repo."
