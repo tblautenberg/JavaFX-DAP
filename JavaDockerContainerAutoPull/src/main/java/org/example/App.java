@@ -17,7 +17,7 @@ public class App {
         // Tjek om target mappen eksisterer, hvis ikke, så opret den
         File targetDir = new File(localRepoDirPath);
         if (!targetDir.exists()) {
-            System.out.println("Target folder doesn't exist. Creating it...");
+            System.out.println("Creating target-repo folder");
             targetDir.mkdirs(); // Opretter target mappen
         } else {
             System.out.println("Target folder already exists.");
@@ -28,8 +28,5 @@ public class App {
         // Klone det fjerne repository
         GitClone gitClone = new GitClone();
         gitClone.cloneRepository(localRepoDirPath, remoteRepoURL);
-
-        System.out.println("Running Main.java in the docker container");
-        System.out.println("... This process should kill itslef, and if not, then it's a bug ...");
     }
 }
