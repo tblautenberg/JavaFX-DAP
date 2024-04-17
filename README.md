@@ -1,6 +1,6 @@
 Alternative program to run javaFX applications via. Java-DAP tool.
 
-To get this to work you need to have installed VcXsrv on your host PC (for windows) or https://www.xquartz.org (for MAC). For both you need to be sure that "Disable acsess controle" is winged off. Otherwise the program will not work as intended.
+To get this to work you need to have installed [VcXsrv](https://sourceforge.net/projects/vcxsrv/) on your host PC (for windows) or https://www.xquartz.org (for MAC). For both you need to be sure that "Disable acsess controle" is winged off. Otherwise the program will not work as intended.
 
 To build the image simply write "docker build -t jap ." inside of the dir. 
 
