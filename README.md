@@ -1,4 +1,4 @@
-Alternative program to run javaFX applications via. Java-DAP tool.
+Alternative program to run javaFX applications via. Java-DAP tool (see https://github.com/tblautenberg/Java-DAP)
 
 To get this to work you need to have installed [VcXsrv](https://sourceforge.net/projects/vcxsrv/) on your host PC (for windows) or [Quartz](https://www.xquartz.org) (for MAC). For both you need to be sure that "Disable acsess controle" is winged off. Otherwise the program will not work as intended.
 
