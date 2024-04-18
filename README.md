@@ -8,6 +8,6 @@ To run the container afterwards, write this command in the console "docker run -
 
 This will start the container, build the target repo with maven, and forward the display via VcXsrv to your host PC.
 
-Here is a bit of UML for the StartScript command.
+Here is a bit of UML for the StartScript bash.
 
 ![Untitled Diagram drawio (2)](https://github.com/tblautenberg/JavaFX-DAP/assets/109878505/d72ff459-9e4e-43c2-8cc1-13ea8e525bf2)
