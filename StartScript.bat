@@ -1,13 +1,23 @@
 @echo off
 cls
 
-rem Start config.xlaunch
-echo Starting config.xlaunch...
-start config.xlaunch
+rem Check if config.xlaunch is running
+tasklist /FI "WINDOWTITLE eq Xming" | find /i "Xming" >nul
+if not errorlevel 1 (
+    echo config.xlaunch is already running.
+) else (
+    echo Starting config.xlaunch...
+    start config.xlaunch
+)
 
-rem Start Docker Desktop from CLI
-echo Starting Docker Desktop...
-start "" "C:\Program Files\Docker\Docker\Docker Desktop.exe" --run
+rem Check if Docker Desktop is running
+tasklist /FI "IMAGENAME eq Docker Desktop.exe" | find /i "Docker Desktop.exe" >nul
+if not errorlevel 1 (
+    echo Docker Desktop is already running.
+) else (
+    echo Starting Docker Desktop...
+    start "" "C:\Program Files\Docker\Docker\Docker Desktop.exe" --run
+)
 
 rem Wait until Docker Desktop is open
 :WAIT
@@ -26,3 +36,6 @@ docker build -t jap .
 rem Run the container start command for the program
 echo Starting the container
 docker run -it --rm -e DISPLAY=host.docker.internal:0.0 jap
+
+rem Wait for any key press before closing the console
+pause >nul
