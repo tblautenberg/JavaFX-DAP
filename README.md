@@ -13,6 +13,7 @@ Here is a bit of UML for the StartScript bash.
 ![Untitled Diagram drawio (2)](https://github.com/tblautenberg/JavaFX-DAP/assets/109878505/d72ff459-9e4e-43c2-8cc1-13ea8e525bf2)
 
 
-*** TO DO ***
+Here is what happens in the docker container.
 
-Finish UML
+
+![Untitled Diagram drawio (3)](https://github.com/tblautenberg/JavaFX-DAP/assets/109878505/2b3563e6-679a-447f-b6d2-2938ffcf2c2d)
