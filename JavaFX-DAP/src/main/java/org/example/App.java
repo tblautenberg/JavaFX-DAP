@@ -8,24 +8,18 @@ import java.io.IOException;
 public class App {
     public static void main(String[] args) throws IOException {
 
-        // Sti til den lokale mappen for repository'et
+        // Repo path inside of docker container
         String localRepoDirPath = "/app/target-repo";
 
-        // URL'en for det fjerne repository, som skal klones
+        // Github repo URL
         String remoteRepoURL = "https://github.com/tblautenberg/JavaFXtestAutoPull";
 
-        // Tjek om target mappen eksisterer, hvis ikke, så opret den
+        // Make target-repo folder
         File targetDir = new File(localRepoDirPath);
-        if (!targetDir.exists()) {
-            System.out.println("Creating target-repo folder");
-            targetDir.mkdirs(); // Opretter target mappen
-        } else {
-            System.out.println("Target folder already exists.");
-            System.out.println("Deleting target folder since it exists with path: " + localRepoDirPath);
-            FileUtils.forceDelete(targetDir);
-        }
+        System.out.println("Creating target-repo folder");
+        targetDir.mkdirs(); // Opretter target mappen
 
-        // Klone det fjerne repository
+        // Clone github repo down to target-repo folder
         GitClone gitClone = new GitClone();
         gitClone.cloneRepository(localRepoDirPath, remoteRepoURL);
     }

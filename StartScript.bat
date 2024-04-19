@@ -26,11 +26,11 @@ tasklist /FI "IMAGENAME eq Docker Desktop.exe" | find /i "Docker Desktop.exe" >n
 if errorlevel 1 goto WAIT
 
 rem Remove the image called "jap" if it exists
-echo Removing 'jap' image if it exists...
+echo Removing 'JavaFX-DAP (JAP)' image if it exists...
 docker rm -f jap 2>nul
 
 rem Build the jap image via Docker
-echo Building 'jap' image...
+echo Building 'JavaFX-DAP (JAP)' image...
 docker build -t jap .
 
 rem Run the container start command for the program
