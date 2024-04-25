@@ -11,6 +11,13 @@ To get this to work you need to have installed [VcXsrv](https://sourceforge.net/
 
 Currently the docker file is set up to run with "OpenJDK 17" and the newest maven version. Adjust this to your preferences!
 
+Easy way to run the program:
+
+Run the ChangeRepo.bat and set the repo that you want to open.
+Run StartScript.bat and wait for your program to start :-)
+
+A bit more technical way to run the program:
+
 To build the image simply write "docker build -t jap ." inside of the dir. 
 
 To run the container afterwards, write this command in the console "docker run -it --rm -e DISPLAY=host.docker.internal:0.0 jap"
