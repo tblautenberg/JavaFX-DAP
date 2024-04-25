@@ -13,15 +13,17 @@ Currently the docker file is set up to run with "OpenJDK 17" and the newest mave
 
 Easy way to run the program:
 
-Run the ChangeRepo.bat and set the repo that you want to open.
+* Run the ChangeRepo.bat and set the repo that you want to open.
 
-Run StartScript.bat and wait for your program to start :-)
+* Run StartScript.bat and wait for your program to start :-)
 
 A bit more technical way to run the program:
 
-To build the image simply write "docker build -t jap ." inside of the dir. 
+* Set your "remoteRepoURL" URL inside of the app.java
 
-To run the container afterwards, write this command in the console "docker run -it --rm -e DISPLAY=host.docker.internal:0.0 jap"
+* To build the image simply write "docker build -t jap ." inside of the dir. 
+
+* To run the container afterwards, write this command in the console "docker run -it --rm -e DISPLAY=host.docker.internal:0.0 jap"
 
 This will start the container, build the target repo with maven, and forward the display via VcXsrv to your host PC.
 
