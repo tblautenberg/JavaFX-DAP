@@ -21,7 +21,7 @@ A bit more technical way to run the program:
 
 * Set your "remoteRepoURL" URL inside of the app.java
 
-* To build the image simply write "docker build -t jap ." inside of the dir. 
+* To build the image simply write "docker build -t jap ." inside of JavaFX-DAP/. 
 
 * To run the container afterwards, write this command in the console "docker run -it --rm -e DISPLAY=host.docker.internal:0.0 jap"
 
