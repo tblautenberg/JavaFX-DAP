@@ -14,6 +14,7 @@ Currently the docker file is set up to run with "OpenJDK 17" and the newest mave
 Easy way to run the program:
 
 Run the ChangeRepo.bat and set the repo that you want to open.
+
 Run StartScript.bat and wait for your program to start :-)
 
 A bit more technical way to run the program:
