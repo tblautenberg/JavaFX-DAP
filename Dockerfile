@@ -2,8 +2,9 @@ FROM ubuntu:latest
 
 # Install required packages
 RUN apt-get update && \
-    apt-get install -y openjdk-17-jdk maven xorg libgl1-mesa-glx dos2unix --no-install-recommends && \
+    apt-get install -y openjdk-17-jdk maven xorg libgl1 dos2unix --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
+
 
 # Set the DISPLAY environment variable for X11 forwarding
 ENV DISPLAY=:0
